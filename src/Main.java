@@ -1,13 +1,10 @@
 import java.util.Scanner;
 
 class getDetails{
-    Scanner x = new Scanner(System.in);
     private  String name = "";
     private  String age = "";
 
-    public getDetails(String name, String age){
-        this.name = name;
-        this.age = age;
+    public getDetails(){
     }
 
     public String getName(String name){
@@ -18,7 +15,7 @@ class getDetails{
         return age;
     }
 
-    public void setDetails(){
+    public void setDetails(Scanner x){
         System.out.print("What is your name?");
         name = x.nextLine();
         System.out.print("What is your age?");
@@ -43,15 +40,13 @@ public class Main{
     getDetails[] p = new getDetails[n];
 
     for (int i = 0; i < n; i++){
-        p[i] = new getDetails("","");
-        p[i].setDetails();
+        p[i] = new getDetails();
+        p[i].setDetails(x);
     }
 
     for (int i = 0; i < n; i++){
         p[i].displayDetails();
     }
-
-
 
     }
 }
