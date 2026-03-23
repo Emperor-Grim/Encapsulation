@@ -15,7 +15,7 @@ class getDetails{
         return age;
     }
 
-    public void setDetails(Scanner x){
+    void setDetails(Scanner x){
         System.out.print("What is your name?");
         name = x.nextLine();
         System.out.print("What is your age?");
@@ -36,7 +36,7 @@ public class Main{
         /* Asks user how many times you want to input// */
     System.out.print("How many times you want to input details?");
     int n = x.nextInt();
-
+    x.nextLine();
     getDetails[] p = new getDetails[n];
 
     for (int i = 0; i < n; i++){
